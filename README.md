@@ -1,25 +1,24 @@
 # RayTracing
 
-This repository demonstrates a simple ray tracing setup initially developed for the Boun Photonics Lab.
+This repository demonstrates a simple ray tracing setup originally developed for the Boun Photonics Lab.
 
-Both the original MATLAB scripts and a Python port are provided.
+The project now provides a Python implementation of the optical system. The earlier MATLAB scripts have been removed.
 
-## MATLAB version
+## Python usage
 
-- `RayTracing.m` – example script that sets up a small optical system using the functions listed below.
-- `lens.m` – computes the imaging properties of a thin lens and can optionally draw the lens and ray lines.
-- `mirror.m` – models reflection from a spherical mirror.
-- `obj.m` – draws a simple object at a given location.
-- `imagePlane.m` – helper used to draw the resulting image plane.
+The repository includes the following modules:
 
-### Running the MATLAB example
+- `ray_tracing.py` – example script that builds a small optical system.
+- `lens.py` – computes the imaging properties of a thin lens.
+- `mirror.py` – models reflection from a spherical mirror.
+- `obj.py` – draws a simple object at a given location.
+- `image_plane.py` – helper used to draw the resulting image plane.
 
-1. Open MATLAB (or an Octave environment).
-2. Ensure all `.m` files are on the MATLAB path.
-3. Run the script `RayTracing.m`.
+Install the required libraries and run the example:
 
-The script will open a new figure and plot the object, lens, mirror, and final image plane. You can edit the parameters inside `RayTracing.m` to experiment with different object positions or focal lengths.
+```bash
+pip install matplotlib numpy
+python ray_tracing.py
+```
 
-## Python version
-
-Install the required libraries and execute `ray_tracing.py`:
+The script will open a figure and plot the object, lens, mirror and final image plane. You can edit the parameters inside `ray_tracing.py` to experiment with different object positions or focal lengths.
