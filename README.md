@@ -6,16 +6,20 @@ Both the original MATLAB scripts and a Python port are provided.
 
 ## MATLAB version
 
-Run the `RayTracing.m` script from MATLAB or Octave to reproduce the demo.
+- `RayTracing.m` – example script that sets up a small optical system using the functions listed below.
+- `lens.m` – computes the imaging properties of a thin lens and can optionally draw the lens and ray lines.
+- `mirror.m` – models reflection from a spherical mirror.
+- `obj.m` – draws a simple object at a given location.
+- `imagePlane.m` – helper used to draw the resulting image plane.
+
+### Running the MATLAB example
+
+1. Open MATLAB (or an Octave environment).
+2. Ensure all `.m` files are on the MATLAB path.
+3. Run the script `RayTracing.m`.
+
+The script will open a new figure and plot the object, lens, mirror, and final image plane. You can edit the parameters inside `RayTracing.m` to experiment with different object positions or focal lengths.
 
 ## Python version
 
 Install the required libraries and execute `ray_tracing.py`:
-
-```
-pip install matplotlib numpy
-python ray_tracing.py
-```
-
-The Python workflow mirrors the MATLAB example by drawing an object, passing rays through a lens and mirror, and finally plotting the result.
-
