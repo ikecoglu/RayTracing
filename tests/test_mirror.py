@@ -13,3 +13,10 @@ def test_mirror_basic():
     assert x_img == 0.0
     assert y_img == -1.0
     assert way == 'R'
+
+
+def test_mirror_right_side():
+    x_img, y_img, way = mirror(20, 1, 10, 5, 'R')
+    assert way == 'L'
+    assert y_img == -1.0
+    assert x_img == 20.0
