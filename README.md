@@ -19,7 +19,7 @@ The repository includes the following modules:
 Install the required libraries and run the example:
 
 ```bash
-pip install matplotlib numpy
+pip install -r requirements.txt
 python ray_tracing.py
 ```
 
