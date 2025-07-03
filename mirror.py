@@ -22,9 +22,14 @@ def mirror(Xobj, Yobj, Xmirror, f, way):
         (Ximg, Yimg, way) with the new image coordinates and updated
         propagation direction.
     """
-    Xdiff = Xmirror - Xobj
-    Xdiffimg = (Xdiff * f) / (Xdiff - f)
-    Ximg = Xmirror - Xdiffimg
+    if way == 'L':
+        Xdiff = Xmirror - Xobj
+        Xdiffimg = (Xdiff * f) / (Xdiff - f)
+        Ximg = Xmirror - Xdiffimg
+    else:
+        Xdiff = Xobj - Xmirror
+        Xdiffimg = (Xdiff * f) / (Xdiff - f)
+        Ximg = Xmirror + Xdiffimg
     Yimg = -(Xdiffimg * Yobj) / Xdiff
 
     if way == 'L':
