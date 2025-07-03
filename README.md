@@ -24,3 +24,12 @@ python ray_tracing.py
 ```
 
 The script will open a figure showing the object, lenses, mirror, aperture and plane mirror along with the final image plane. You can edit the parameters inside `ray_tracing.py` to experiment with different object positions or focal lengths.
+
+## Testing
+
+Unit tests verify the basic imaging calculations for the lens and mirror utilities. After installing the dependencies you can run the tests with `pytest`:
+
+```bash
+pip install -r requirements.txt
+pytest
+```
