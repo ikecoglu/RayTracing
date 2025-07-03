@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from obj import obj
 from lens import lens
 from mirror import mirror
+from plane_mirror import plane_mirror
+from aperture import aperture
 from image_plane import image_plane
 
 
@@ -12,10 +14,15 @@ def main():
     way = 'L'
     Xobj, Yobj = obj(15, 1)
 
+    aperture(22, 2)
+
     Ximg, Yimg = lens(Xobj, Yobj, 30, -10, way, 1)
     image_plane(Ximg, Yimg)
 
     Ximg, Yimg, way = mirror(Ximg, Yimg, 60, 10, way)
+    image_plane(Ximg, Yimg)
+
+    Ximg, Yimg, way = plane_mirror(Ximg, Yimg, 80, way)
     image_plane(Ximg, Yimg)
 
     Ximg, Yimg = lens(Ximg, Yimg, 30, -10, way, 0)
