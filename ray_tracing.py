@@ -28,6 +28,7 @@ def main():
     Ximg, Yimg = lens(Ximg, Yimg, 30, -10, way, 0)
     image_plane(Ximg, Yimg)
     m = Yimg / Yobj
+    print(f"m = {m}")
 
     lim = plt.xlim()
     plt.plot([lim[0], lim[1]], [0, 0], 'k', linewidth=1.5)
