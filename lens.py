@@ -3,7 +3,27 @@ import matplotlib.pyplot as plt
 
 
 def lens(Xobj, Yobj, Xlens, f, way, draw_lens):
-    """Calculate the image from a thin lens and optionally draw the lens."""
+    """Thin lens imaging.
+
+    Parameters
+    ----------
+    Xobj, Yobj : float
+        Coordinates of the object.
+    Xlens : float
+        Position of the lens along the X axis.
+    f : float
+        Focal length of the lens (positive for converging, negative for
+        diverging).
+    way : {'L', 'R'}
+        Direction of propagation.
+    draw_lens : int
+        If non-zero, the lens is drawn on the current matplotlib axes.
+
+    Returns
+    -------
+    tuple
+        (Ximg, Yimg) coordinates of the image produced by the lens.
+    """
     if way == 'L':
         Xdiff = Xlens - Xobj
         Xdiffimg = (Xdiff * f) / (Xdiff - f)

@@ -3,7 +3,25 @@ import matplotlib.pyplot as plt
 
 
 def mirror(Xobj, Yobj, Xmirror, f, way):
-    """Calculate the image from a mirror and draw the mirror."""
+    """Spherical mirror imaging.
+
+    Parameters
+    ----------
+    Xobj, Yobj : float
+        Coordinates of the object.
+    Xmirror : float
+        Position of the mirror along the X axis.
+    f : float
+        Mirror focal length (positive for concave, negative for convex).
+    way : {'L', 'R'}
+        Direction of propagation before reflection.
+
+    Returns
+    -------
+    tuple
+        (Ximg, Yimg, way) with the new image coordinates and updated
+        propagation direction.
+    """
     Xdiff = Xmirror - Xobj
     Xdiffimg = (Xdiff * f) / (Xdiff - f)
     Ximg = Xmirror - Xdiffimg
